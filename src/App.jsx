@@ -1,8 +1,9 @@
 import React from 'react';
+import FirstView from './pages/firstview/FirstView';
 
 function App() {
   return (
-    <h1>Parcel app</h1>
+    <FirstView />
   );
 }
 

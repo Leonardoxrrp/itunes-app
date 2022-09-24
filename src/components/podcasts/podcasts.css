@@ -1,0 +1,19 @@
+.podcasts-card {
+    width: 320px;
+    position: relative;
+    min-height: 180px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 10px;
+}
+
+.podcasts-card img {
+    border-radius: 50%;
+    position: absolute;
+    right: 70;
+    top: -90;
+}
+
+.podcasts-card-text {
+    margin-top: 100px;
+}
