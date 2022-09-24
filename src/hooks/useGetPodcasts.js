@@ -3,10 +3,14 @@ import axios from 'axios';
 
 function useGetPodcasts() {
   const [podcasts, setPodcasts] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+
   const getPodcasts = async () => {
+    const url = 'https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json';
     try {
-      const { data: { feed } } = await axios.get('https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json');
+      const { data: { feed } } = await axios.get(url);
       setPodcasts(feed);
+      setSearchResults(feed.entry);
     } catch (err) {
       console.error(err);
     }
@@ -16,6 +20,8 @@ function useGetPodcasts() {
   }, []);
   return {
     podcasts,
+    searchResults,
+    setSearchResults,
   };
 }
 

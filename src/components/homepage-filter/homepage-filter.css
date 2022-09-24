@@ -1,4 +1,12 @@
 .homepage-filter-input {
     display: flex;
-    width: 200px;
+    column-gap: 20px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.homepagefilter-badge {
+    font-size: 20px !important;
+    display: 'flex' !important;
+    align-items: 'center' 
 }
