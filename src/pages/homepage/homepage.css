@@ -1,0 +1,26 @@
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.homepage-podcasts-container {
+    display: grid;
+    row-gap: 200px;
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.homepage-filter-container {
+    margin-right: 100px;
+    display: flex;
+    justify-content: end;
+}
+
+@media only screen and (max-width: 1300px) {
+    .homepage-podcasts-container {
+        grid-template-columns: auto auto auto;
+    }
+  }

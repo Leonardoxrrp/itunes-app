@@ -1,9 +1,9 @@
 import React from 'react';
-import FirstView from './pages/firstview/FirstView';
+import HomePage from './pages/homepage/HomePage';
 
 function App() {
   return (
-    <FirstView />
+    <HomePage />
   );
 }
 
