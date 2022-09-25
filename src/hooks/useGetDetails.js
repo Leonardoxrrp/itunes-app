@@ -15,6 +15,7 @@ function useGetDetails() {
     }
   };
   useEffect(() => {
+    if (!podcastId) return null;
     getDetails();
   }, []);
   return {

@@ -4,8 +4,8 @@ import { Context } from '../../context/AppContext';
 
 import './podcasts.css';
 
-function Podcasts({ searchResults }) {
-  const { setPointer } = useContext(Context);
+function Podcasts() {
+  const { setPointer, searchResults } = useContext(Context);
   const textUpperCase = (text) => text.toUpperCase();
   return (
     searchResults.map((podcast) => (

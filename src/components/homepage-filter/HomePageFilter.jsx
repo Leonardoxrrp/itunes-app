@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Badge, Form, InputGroup } from 'react-bootstrap';
+import { Context } from '../../context/AppContext';
 import { filterLogic } from '../utils/filterLogic';
 import './homepage-filter.css';
 
-function HomePageFilter({ podcasts, searchResults, setSearchResults }) {
+function HomePageFilter() {
+  const { podcasts, searchResults, setSearchResults } = useContext(Context);
   const handleChange = (e) => {
     const value = e.target.value.trim().toLowerCase();
     const search = podcasts?.entry?.filter((podcast) => filterLogic(podcast['im:name'].label, podcast['im:artist'].label, value));

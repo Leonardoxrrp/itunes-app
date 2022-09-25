@@ -1,13 +1,13 @@
 import Linkify from 'linkify-react';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { Context } from '../../context/AppContext';
 import useGetDetails from '../../hooks/useGetDetails';
-import useGetPodcasts from '../../hooks/useGetPodcasts';
 
 function PodcastDetails({ children }) {
   const navigate = useNavigate();
   const { podcastDetails } = useGetDetails();
-  const { podcasts } = useGetPodcasts();
+  const { podcasts } = useContext(Context);
   const { podcastId } = useParams();
   const handleNavigation = () => {
     if (window.location.pathname.includes('episode')) return navigate(-1);
