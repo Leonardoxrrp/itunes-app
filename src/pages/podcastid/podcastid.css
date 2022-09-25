@@ -1,7 +1,8 @@
 .podcastid-container {
-    width: 1300px;
+    width:100%;
+    max-width: 1300px;
     display: grid;
-    column-gap: 100px;
+    column-gap: 7%;
     grid-template-columns: 0.4fr 1fr;
 }
 
@@ -35,8 +36,24 @@
     margin-bottom: 40px;
 }
 .podcast-left-side-image {
+    width: 100%;
     max-width: 240px;
 }
 .podcast-left-side-details {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+}
+
+@media only screen and (max-width:1000px) {
+    .podcastid-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 400px;
+    }
+    .podcast-left-side-details {
+        width: 100%;
+        min-width: 400px;
+    }    
+
 }
