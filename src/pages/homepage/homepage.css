@@ -1,15 +1,17 @@
 .homepage-container {
     display: flex;
     flex-direction: column;
-    width: 90%;
     margin-top: 100px;
     margin-bottom: 100px;
+    width: 100%;
+    max-width: 1300px;
 }
 
 .homepage-podcasts-container {
     display: grid;
     row-gap: 200px;
-    column-gap: 40px;
+    column-gap: 2%;
+    align-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 100px;
 }
@@ -23,4 +25,16 @@
     .homepage-podcasts-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
-  }
+}
+@media only screen and (max-width: 1000px) {
+    .homepage-podcasts-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .homepage-podcasts-container {
+        column-gap: 0px;
+        grid-template-columns: 1fr;
+    }
+}

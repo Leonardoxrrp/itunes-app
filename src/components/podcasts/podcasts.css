@@ -1,14 +1,6 @@
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
-
 .podcasts-card {
-    width: 300px;
+  width: 100%;
+    min-width: 300px;
     position: relative;
     min-height: 180px;
     text-align: center;
@@ -26,12 +18,9 @@
     border-radius: 50%;
     width: 140px;
     position: absolute;
-    right: 80;
+    left: 50%;
+    transform: translate(-50%, 0);
     top: -60;
-}
-
-.podcasts-card img:hover {
-    animation: rotation 4s infinite linear;
 }
 
 .podcasts-card-text {

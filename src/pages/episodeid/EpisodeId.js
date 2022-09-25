@@ -1,11 +1,11 @@
 import Linkify from 'linkify-react';
-import React, { useContext } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import PodcastDetails from '../../components/podcastDetails/PodcastDetails';
-import { Context } from '../../context/AppContext';
+import useGetDetails from '../../hooks/useGetDetails';
 
 function EpisodeId() {
-  const { podcastDetails } = useContext(Context);
+  const { podcastDetails } = useGetDetails();
   const { episodeId } = useParams();
   const episode = podcastDetails?.find((element) => Number(element.trackId) === Number(episodeId));
   const description = episode?.shortDescription || episode?.description;

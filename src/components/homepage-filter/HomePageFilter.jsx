@@ -13,9 +13,9 @@ function HomePageFilter() {
   };
 
   return (
-    <div className="homepage-filter-input">
+    <div className="homepage-filter-container">
       <Badge bg="info" className="homepagefilter-badge">{searchResults.length}</Badge>
-      <div>
+      <div className="homepage-filter-input">
         <InputGroup>
           <Form.Control
             onChange={handleChange}

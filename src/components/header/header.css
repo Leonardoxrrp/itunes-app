@@ -1,5 +1,6 @@
 .header-container {
-    width: 1320px;
+    width: 100%;
+    max-width: 1320px;
 }
 .header-container h3 {
     margin-right: auto;
