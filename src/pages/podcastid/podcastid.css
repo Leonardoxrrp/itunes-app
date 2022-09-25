@@ -8,11 +8,13 @@
 .podcastid-right-side {
     display: flex;
     row-gap: 20px;
-    flex-direction: column; 
+    margin-bottom: 40px;
+    flex-direction: column;
 }
 .podcastid-right-side-details, 
 .podcastid-right-side-episodes, 
 .podcast-left-side {
+    padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px 2px;
@@ -28,6 +30,7 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 40px;
 }
 .podcast-left-side-image {
     max-width: 240px;

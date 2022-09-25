@@ -12,8 +12,7 @@ function PodcastId() {
       <div className="podcastid-right-side">
         <div className="podcastid-right-side-episodes">
           <p className="fw-bold podcastid-episodes-text">
-            <span>Episodes</span>
-            :
+            <span>Episodes: </span>
             {podcastDetails.length}
           </p>
         </div>

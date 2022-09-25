@@ -18,6 +18,18 @@ function EpisodeId() {
             <p className="fst-italic">{description}</p>
           </Linkify>
           <p />
+          <hr />
+          <audio
+            style={{ width: '100%', marginBottom: '20px' }}
+            controls
+            src={episode?.episodeUrl}
+          >
+            <track
+              default
+              kind="captions"
+              srcLang="en"
+            />
+          </audio>
         </div>
       </div>
     </PodcastDetails>

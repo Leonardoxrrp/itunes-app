@@ -31,9 +31,9 @@ function EpisodesTable({ episodes }) {
         {
             allEpisodes.map((episode) => (
               <tr key={episode.trackId}>
-                <td className="episodes-table-trackname"><Link to={`${episode.trackId}`}>{episode.trackName}</Link></td>
-                <td className="td-details"><Link to={`${episode.trackId}`}>{releaseDate(episode.releaseDate)}</Link></td>
-                <td className="td-details"><Link to={`${episode.trackId}`}>{minutes(episode.trackTimeMillis)}</Link></td>
+                <td className="episodes-table-trackname"><Link to={`episode/${episode.trackId}`}>{episode.trackName}</Link></td>
+                <td className="td-details"><Link to={`episode/${episode.trackId}`}>{releaseDate(episode.releaseDate)}</Link></td>
+                <td className="td-details"><Link to={`episode/${episode.trackId}`}>{minutes(episode.trackTimeMillis)}</Link></td>
               </tr>
             ))
         }
