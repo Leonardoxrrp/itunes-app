@@ -19,7 +19,9 @@
     padding-right: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px 2px;
 }
-
+.podcast-navigation {
+    cursor: pointer;
+}
 .podcastid-episodes-text {
     font-size: 24px;
 }
