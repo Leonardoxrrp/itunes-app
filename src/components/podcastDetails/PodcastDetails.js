@@ -11,7 +11,7 @@ function PodcastDetails({ children }) {
   const { podcastId } = useParams();
   const handleNavigation = () => {
     if (window.location.pathname.includes('episode')) return navigate(-1);
-    return navigate(0);
+    return null;
   };
   const info = podcastDetails.find((detail) => detail.wrapperType === 'track');
   const description = podcasts?.entry?.find((podcast) => podcast.id.attributes['im:id'] === podcastId);
