@@ -1,5 +1,5 @@
 {
-  "name": "zara-test",
+  "name": "itunes-app",
   "version": "1.0.0",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "source": "src/index.html",
@@ -23,6 +23,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
+    "linkify-react": "^4.0.0",
+    "linkifyjs": "^4.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",

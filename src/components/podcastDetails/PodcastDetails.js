@@ -1,3 +1,4 @@
+import Linkify from 'linkify-react';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useGetDetails from '../../hooks/useGetDetails';
@@ -29,7 +30,9 @@ function PodcastDetails({ children }) {
             </div>
             <div>
               <p className="fw-bold">Description</p>
-              <p>{description?.summary.label}</p>
+              <Linkify>
+                <p>{description?.summary.label}</p>
+              </Linkify>
             </div>
           </div>
         </div>
