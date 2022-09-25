@@ -4,7 +4,6 @@ import './podcasts.css';
 
 function Podcasts({ searchResults }) {
   const textUpperCase = (text) => text.toUpperCase();
-  console.log(searchResults, 'results');
   return (
     searchResults.map((podcast) => (
       <Link to={`podcast/${podcast.id.attributes['im:id']}`} style={{ textDecoration: 'none' }} key={podcast['im:name'].label}>

@@ -9,8 +9,20 @@ function PodcastId() {
 
   return (
     <PodcastDetails>
-      <EpisodesTable episodes={podcastDetails} />
+      <div className="podcastid-right-side">
+        <div className="podcastid-right-side-episodes">
+          <p className="fw-bold podcastid-episodes-text">
+            <span>Episodes</span>
+            :
+            {podcastDetails.length}
+          </p>
+        </div>
+        <div className="podcastid-right-side-details">
+          <EpisodesTable episodes={podcastDetails} />
+        </div>
+      </div>
     </PodcastDetails>
+
   );
 }
 

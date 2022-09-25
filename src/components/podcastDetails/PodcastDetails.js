@@ -1,10 +1,14 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import useGetDetails from '../../hooks/useGetDetails';
+import useGetPodcasts from '../../hooks/useGetPodcasts';
 
 function PodcastDetails({ children }) {
   const { podcastDetails } = useGetDetails();
-  const info = podcastDetails.find((detail) => detail.artworkUrl600);
-
+  const { podcasts } = useGetPodcasts();
+  const { podcastId } = useParams();
+  const info = podcastDetails.find((detail) => detail.wrapperType === 'track');
+  const description = podcasts?.entry?.find((podcast) => podcast.id.attributes['im:id'] === podcastId);
   return (
     <div className="podcastid-container">
       <div>
@@ -25,23 +29,13 @@ function PodcastDetails({ children }) {
             </div>
             <div>
               <p className="fw-bold">Description</p>
+              <p>{description?.summary.label}</p>
             </div>
           </div>
         </div>
 
       </div>
-      <div className="podcastid-right-side">
-        <div className="podcastid-right-side-episodes">
-          <p className="fw-bold podcastid-episodes-text">
-            <span>Episodes</span>
-            :
-            {podcastDetails.length}
-          </p>
-        </div>
-        <div className="podcastid-right-side-details">
-          {children}
-        </div>
-      </div>
+      {children}
     </div>
   );
 }
