@@ -1,21 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './podcasts.css';
 
 function Podcasts({ searchResults }) {
   const textUpperCase = (text) => text.toUpperCase();
-
+  console.log(searchResults, 'results');
   return (
     searchResults.map((podcast) => (
-      <div className="podcasts-card" key={podcast['im:name'].label}>
-        <img src={podcast['im:image'][2].label} alt={podcast['im:name'].label} />
-        <div className="podcasts-card-text">
-          <p className="fw-bold">{textUpperCase(podcast['im:name'].label)}</p>
-          <p className="fw-light">
-            <span>Author: </span>
-            {textUpperCase(podcast['im:artist'].label)}
-          </p>
+      <Link to={`podcast/${podcast.id.attributes['im:id']}`} style={{ textDecoration: 'none' }} key={podcast['im:name'].label}>
+        <div className="podcasts-card">
+          <img src={podcast['im:image'][2].label} alt={podcast['im:name'].label} />
+          <div className="podcasts-card-text">
+            <p className="fw-bold">{textUpperCase(podcast['im:name'].label)}</p>
+            <p className="fw-light">
+              <span>Author: </span>
+              {textUpperCase(podcast['im:artist'].label)}
+            </p>
+          </div>
         </div>
-      </div>
+      </Link>
     ))
   );
 }
