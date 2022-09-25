@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../../context/AppContext';
+
 import './podcasts.css';
 
 function Podcasts({ searchResults }) {
+  const { setPointer } = useContext(Context);
   const textUpperCase = (text) => text.toUpperCase();
   return (
     searchResults.map((podcast) => (
-      <Link to={`podcast/${podcast.id.attributes['im:id']}`} style={{ textDecoration: 'none' }} key={podcast['im:name'].label}>
+      <Link onClick={() => setPointer(true)} to={`podcast/${podcast.id.attributes['im:id']}`} style={{ textDecoration: 'none' }} key={podcast['im:name'].label}>
         <div className="podcasts-card">
           <img src={podcast['im:image'][2].label} alt={podcast['im:name'].label} />
           <div className="podcasts-card-text">

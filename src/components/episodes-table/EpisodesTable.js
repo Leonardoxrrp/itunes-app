@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Context } from '../../context/AppContext';
 import './episodes-table.css';
 
 function EpisodesTable({ episodes }) {
+  const { setPointer } = useContext(Context);
+
   // index 0 is not an episode
   const allEpisodes = episodes.slice(1);
 
@@ -31,7 +34,7 @@ function EpisodesTable({ episodes }) {
         {
             allEpisodes.map((episode) => (
               <tr key={episode.trackId}>
-                <td className="episodes-table-trackname"><Link to={`episode/${episode.trackId}`}>{episode.trackName}</Link></td>
+                <td className="episodes-table-trackname"><Link onClick={() => setPointer(true)} to={`episode/${episode.trackId}`}>{episode.trackName}</Link></td>
                 <td className="td-details"><Link to={`episode/${episode.trackId}`}>{releaseDate(episode.releaseDate)}</Link></td>
                 <td className="td-details"><Link to={`episode/${episode.trackId}`}>{minutes(episode.trackTimeMillis)}</Link></td>
               </tr>

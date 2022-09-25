@@ -17,7 +17,6 @@ function HomePage() {
       </div>
       <div className="homepage-podcasts-container">
         <Podcasts
-          podcasts={podcasts}
           searchResults={searchResults}
         />
       </div>
