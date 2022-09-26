@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import moment from 'moment';
 import { isTimestampExpired } from '../components/utils/isTimestampExpired';
+import { CORS } from '../components/utils/CORS';
 
 function useGetPodcasts() {
   const [podcasts, setPodcasts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
 
   const getPodcasts = async () => {
-    const url = 'https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json';
+    const url = `${CORS}/https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json`;
     try {
       const { data: { feed } } = await axios.get(url);
       setPodcasts(feed);
