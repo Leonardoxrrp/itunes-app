@@ -2,6 +2,7 @@
 
 ## How to start the app
 
+0. activate cors here: https://cors-anywhere.herokuapp.com/
 - Development:
 1. yarn
 2. yarn start
