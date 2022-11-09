@@ -13,7 +13,8 @@ function EpisodeId() {
 
   return (
     <>
-      {!episode && <Spinner animation="grow" role="status" />}
+      {!episode && <Spinner animation="border" role="status" />}
+      {episode && (
       <PodcastDetails>
         <div className="podcastid-right-side">
           <div className="podcastid-right-side-details">
@@ -37,6 +38,7 @@ function EpisodeId() {
           </div>
         </div>
       </PodcastDetails>
+      )}
     </>
   );
 }

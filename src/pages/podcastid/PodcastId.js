@@ -9,7 +9,8 @@ function PodcastId() {
   const { podcastDetails } = useGetDetails();
   return (
     <>
-      {podcastDetails.length === 0 && <Spinner animation="grow" role="status" />}
+      {podcastDetails.length === 0 && <Spinner animation="border" role="status" />}
+      {podcastDetails.length > 0 && (
       <PodcastDetails>
         <div className="podcastid-right-side">
           <div className="podcastid-right-side-episodes">
@@ -23,6 +24,7 @@ function PodcastId() {
           </div>
         </div>
       </PodcastDetails>
+      )}
     </>
   );
 }
