@@ -10,7 +10,7 @@ function Podcasts() {
 
   return (
     <>
-    {podcasts.length === 0 && <p>Please activate CORS <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">here</a> and refresh the page in order to consume the iTunes API</p>}
+    {podcasts.length === 0 && <p>Please activate <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">demo server</a> and refresh the page in order to consume the iTunes API</p>}
     {searchResults.map((podcast) => (
       <Link onClick={() => setPointer(true)} to={`podcast/${podcast.id.attributes['im:id']}`} style={{ textDecoration: 'none' }} key={podcast['im:name'].label}>
         <div className="podcasts-card">
