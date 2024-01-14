@@ -1,7 +1,7 @@
 const corsAnywhere = require('cors-anywhere');
 
 const proxy = corsAnywhere.createServer({
-    originWhitelist: ['https://itunes-app-seven.vercel.app'],
+    originWhitelist: [],
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 });
